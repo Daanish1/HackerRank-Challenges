@@ -4,6 +4,30 @@ import java.util.ArrayList;
 
 public class SpecialStringAgain {
 
+    //Online Solution - I dont like this solution :(
+    //https://www.youtube.com/watch?v=SJ_C9mclZJo&t=246s&ab_channel=AnandPandey
+    public static long onlineSubstrCount(int n, String s) {
+        long ans = s.length();
+        for (int i = 0; i < s.length(); i++) {
+            int repeat = 0;
+            while (i+1 < s.length() && s.charAt(i) == s.charAt(i+1)) {
+                repeat++;
+                i++;
+            }
+            ans += repeat*(repeat+1)/2;
+            int pointer = 1;
+            while ( i  - pointer >= 0 && i+pointer < s.length() && s.charAt(i+pointer) == s.charAt(i-1)
+            && s.charAt(i-pointer) == s.charAt(i-1)) {
+                ans++;
+                pointer++;
+            }
+
+        }
+
+        return ans;
+    }
+
+    //Inefficient Solution (BAD):
     public static long substrCount(int n, String s) {
         long numSubCount = 0;
 
@@ -40,7 +64,7 @@ public class SpecialStringAgain {
     }
 
 
-
+    //Efficient Solution (GOOD)
     public static long efficientSubstrCount(int n, String s) {
         long numSubCount = n;
 
@@ -79,8 +103,12 @@ public class SpecialStringAgain {
         String s = "asasd";
 
 //        long result = substrCount(s.length(), s);
+
         long result = efficientSubstrCount(s.length(), s);
 
+//        long otherResult = onlineSubstrCount(s.length(), s);
+
         System.out.println(result);
+//        System.out.println(otherResult);
     }
 }
