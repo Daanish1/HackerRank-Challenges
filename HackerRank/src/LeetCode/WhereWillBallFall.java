@@ -30,7 +30,6 @@ public class WhereWillBallFall {
         int[][] grid = {{1,1,1,-1,-1},{1,1,1,-1,-1},{-1,-1,-1,1,1},{1,1,1,1,-1},{-1,-1,-1,-1,-1}};
 
         int[] res = findBall(grid);
-
     }
 
 }
