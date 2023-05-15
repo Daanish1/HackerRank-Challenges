@@ -1,4 +1,4 @@
-package interviewprep.string;
+package hackerrank;
 
 import java.util.ArrayList;
 

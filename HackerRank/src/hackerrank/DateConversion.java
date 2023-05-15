@@ -1,4 +1,4 @@
-package interviewprep.string;
+package hackerrank;
 
 public class DateConversion {
 
@@ -9,13 +9,10 @@ public class DateConversion {
         StringBuilder stb = new StringBuilder();
         String val;
         if ((ap == 'A') && (Integer.parseInt(splitted[0]) >= 12)) {
-//            stb.append(Integer.parseInt(splitted[0]) - 12);
             val = Integer.toString(Integer.parseInt(splitted[0]) - 12);
         } else if ((ap == 'P') && (Integer.parseInt(splitted[0]) < 12)) {
                 val = Integer.toString(Integer.parseInt(splitted[0]) + 12);
-//            stb.append(Integer.parseInt(splitted[0]) + 12);
         } else {
-//            stb.append(splitted[0]);
             val = splitted[0];
         }
         if (val.length() == 1) {

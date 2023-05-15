@@ -1,4 +1,4 @@
-package interviewprep.string;
+package hackerrank;
 
 public class CommonChild {
 
