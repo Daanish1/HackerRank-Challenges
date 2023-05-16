@@ -14,7 +14,6 @@ public class SwappingNodesInLinkedList {
             right = right.next;
         }
 
-
         int temp = left.val;
         left.val = right.val;
         right.val = temp;
